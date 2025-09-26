@@ -15,23 +15,21 @@ https://darkrp.miraheze.org/wiki/DarkRP:CustomJobFields
 
 Add your custom jobs under the following line:
 ---------------------------------------------------------------------------]]
+1 = DarkRP.createJob("Солдат", {
+	color = Color(0, 140, 255, 255),
+	model = {"models/player/riot.mdl"},
+	description = [[Вы - Закон!]],
+	weapons = {"weapon_glock2", "keys", "arrest_stick", "door_ram", "unarrest_stick"},
+	command = "Департамент обороны",
+	max = 10,
+	salary = 100,
+	admin = 0,
+	vote = false,
+	hasLicense = true,
+	candemote = true,
+	category = "Силовые структуры",
+})
 
 
 
 --[[---------------------------------------------------------------------------
-Define which team joining players spawn into and what team you change to if demoted
----------------------------------------------------------------------------]]
-GAMEMODE.DefaultTeam = TEAM_CITIZEN
---[[---------------------------------------------------------------------------
-Define which teams belong to civil protection
-Civil protection can set warrants, make people wanted and do some other police related things
----------------------------------------------------------------------------]]
-GAMEMODE.CivilProtection = {
-    [TEAM_POLICE] = true,
-    [TEAM_CHIEF] = true,
-    [TEAM_MAYOR] = true,
-}
---[[---------------------------------------------------------------------------
-Jobs that are hitmen (enables the hitman menu)
----------------------------------------------------------------------------]]
-DarkRP.addHitmanTeam(TEAM_MOB)
